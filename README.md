@@ -53,19 +53,19 @@ All classes have the same function with the same parameters.
 <script src="js/jquery.nebri_auth.js"></script>
 <script type="text/javascript">
     var token_client = new $.NebriTokenClient("instance_name", "token");
-    token_client.api_request("nebrios_authentication", "token_auth_endpoint", "POST", {}, function(data){
+    token_client.api_request("nebrios_authentication", "token_auth_endpoint", "POST", {'key': 'value'}, function(data){
         console.log(data);
     });
     var basic_client = new $.NebriBasicClient("instance_name", "username", "password");
-    basic_client.api_request("nebrios_authentication", "basic_auth_endpoint", "POST", {}, function(data){
+    basic_client.api_request("nebrios_authentication", "basic_auth_endpoint", "POST", null, function(data){
         console.log(data);
     });
     var oauth_client = new $.NebriOAuthClient("instance_name", "consumer_key", "consumer_secret", "access_token");
-    oauth_client.api_request("nebrios_authentication", "oauth_endpoint", "POST", {}, function(data){
+    oauth_client.api_request("nebrios_authentication", "oauth_endpoint", "POST", null, function(data){
         console.log(data);
     });
     var oauth_client_no_token = new $.NebriOAuthClient("instance_name", "consumer_key", "consumer_secret");
-    oauth_client.api_request("nebrios_authentication", "oauth_endpoint", "POST", {}, function(data){
+    oauth_client.api_request("nebrios_authentication", "oauth_endpoint", "POST", null, function(data){
         console.log(data);
     }, function(error){
         console.log(error)
