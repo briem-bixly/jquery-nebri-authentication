@@ -6,7 +6,11 @@
     NebriToken.prototype = new $.NebriClient();
     NebriToken.prototype.parent = $.NebriClient.prototype;
     NebriToken.prototype.api_request = function(api_module, view_name, method, payload, callback, error_callback) {
-        payload['token'] = this.token;
+        if (payload == null){
+            payload = {'token': this.token};
+        } else{
+            payload['token'] = this.token;
+        }
         this.parent.api_request.call(this, api_module, view_name, method, payload, callback, error_callback);
     };
     function NebriBasic(instance_name, username, password) {
@@ -17,7 +21,11 @@
     NebriBasic.prototype = new $.NebriClient();
     NebriBasic.prototype.parent = $.NebriClient.prototype;
     NebriBasic.prototype.api_request = function(api_module, view_name, method, payload, callback, error_callback) {
-        payload['basic_auth'] = "Basic " + btoa(this.username + ':' + this.password);
+        if (payload == null){
+            payload = {'basic_auth': "Basic " + btoa(this.username + ':' + this.password)};
+        } else {
+            payload['basic_auth'] = "Basic " + btoa(this.username + ':' + this.password);
+        }
         this.parent.api_request.call(this, api_module, view_name, method, payload, callback, error_callback);
     };
     function NebriOAuth(instance_name, consumer_key, consumer_secret, access_token){
@@ -41,7 +49,11 @@
     NebriOAuth.prototype = new $.NebriClient();
     NebriOAuth.prototype.parent = $.NebriClient.prototype;
     NebriOAuth.prototype.api_request = function(api_module, view_name, method, payload, callback, error_callback) {
-        payload['access_token'] = this.access_token;
+        if (payload == null){
+            payload = {'access_token': this.access_token};
+        } else {
+            payload['access_token'] = this.access_token;
+        }
         this.parent.api_request.call(this, api_module, view_name, method, payload, callback, error_callback);
     };
 
