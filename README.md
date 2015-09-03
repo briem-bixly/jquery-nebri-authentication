@@ -10,7 +10,7 @@ Copy jquery.nebri_auth.js to the appropriate location in your application.
 <h2>Requirements</h2>
 This package requires https://github.com/briem-bixly/jquery-nebrios.
 
-NOTE: Before using any classes and associated functions in this package, you must include nebrios-authentication in your NebriOS Instance and set up any authentication methods you would like to utilize. See https://github.com/briem-bixly/nebrios-authentication/blob/master/README.md for more information.
+NOTE: Before using any classes and associated functions in this package, you must include nebrios-authentication in your Nebri Instance and set up any authentication methods you would like to utilize. See https://github.com/briem-bixly/nebrios-authentication/blob/master/README.md for more information.
 
 <h2>Public Classes</h2>
 <strong>NebriTokenClient</strong>
