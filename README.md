@@ -43,7 +43,7 @@ All classes have the same function with the same parameters.
 - api_module: the name of the api module stored on your NebriOS instance
 - view_name: the name of the target function contained in the given api module
 - method: the desired HTTP request method
-- payload: an object containing params and values, if no payload is meant to be sent, `{}` should be passed
+- payload: an object containing params and values, if no payload is meant to be sent, `null` should be passed
 - callback: the function to execute after a successful api request. this callback will receive all data included in your view's response. `null` should be sent if a callback is not specified.
 - error_callback: the function to execute after an unsuccessful api request. `null` should be sent if an error callback is not specified.
 
