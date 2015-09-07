@@ -13,7 +13,7 @@ This package requires https://github.com/briem-bixly/jquery-nebrios.
 NOTE: Before using any classes and associated functions in this package, you must include nebrios-authentication in your Nebri Instance and set up any authentication methods you would like to utilize. See https://github.com/briem-bixly/nebrios-authentication/blob/master/README.md for more information.
 
 <h2>Public Classes</h2>
-<strong>NebriTokenClient</strong>
+<strong>NebriTokenClient</strong><br>
 This is the most basic authentication method supported. This class must be instantiated before use.
 ```
 var token_client = $.NebriTokenClient('instance_name', 'token');
