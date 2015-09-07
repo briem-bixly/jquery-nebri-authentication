@@ -33,7 +33,7 @@ var oauth_client = $.NebriOAuthClient('instance_name', 'consumer_key', 'consumer
 ```
 - consumer key and consumer secret should be obtained from your Nebri instance using https://github.com/briem-bixly/nebrios-authentication
 - if you have already created an access token all arguments should be passed
-- if you have not created an access token, only consumer key and consumer secret are required. this app will make the appropriate call for an access token and will save the generated token to your NebriAuthClient instance automatically.
+- if you have not created an access token, only consumer key and consumer secret are required. this app will make the appropriate call for an access token and will save the generated token to your NebriOAuthClient instance automatically.
 
 <h2>Public Function</h2>
 All classes have the same function with the same parameters.
