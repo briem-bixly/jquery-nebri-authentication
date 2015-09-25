@@ -8,9 +8,9 @@ This package is intended for use with a Nebri instance. Visit https://nebrios.co
 Copy jquery.nebri_auth.js to the appropriate location in your application.
 
 <h2>Requirements</h2>
-This package requires https://github.com/briem-bixly/jquery-nebrios.
+This package requires https://github.com/nebrie/jquery-nebrios.
 
-NOTE: Before using any classes and associated functions in this package, you must include nebrios-authentication in your Nebri Instance and set up any authentication methods you would like to utilize. See https://github.com/briem-bixly/nebrios-authentication/blob/master/README.md for more information.
+NOTE: Before using any classes and associated functions in this package, you must include nebrios-authentication in your Nebri Instance and set up any authentication methods you would like to utilize. See https://github.com/nebrie/nebrios-authentication/blob/master/README.md for more information.
 
 <h2>Public Classes</h2>
 <strong>NebriTokenClient</strong><br>
@@ -19,19 +19,19 @@ This is the most basic authentication method supported. This class must be insta
 var token_client = $.NebriTokenClient('instance_name', 'token');
 ```
 - instance name is your Nebri instance name. i.e. https://<strong>instance_name</strong>.nebrios.com
-- your token must be generated on your Nebri instance using https://github.com/briem-bixly/nebrios-authentication
+- your token must be generated on your Nebri instance using https://github.com/nebrie/nebrios-authentication
 
 <strong>NebriBasicClient</strong>
 ```
 var basic_client = $.NebriBasicClient('instance_name', 'username', 'password');
 ```
-- before using this method, a username and password combo should be saved to your Nebri instance using https://github.com/briem-bixly/nebrios-authentication
+- before using this method, a username and password combo should be saved to your Nebri instance using https://github.com/nebrie/nebrios-authentication
 
 <strong>NebriOAuthClient</strong>
 ```
 var oauth_client = $.NebriOAuthClient('instance_name', 'consumer_key', 'consumer_secret', 'access_token');
 ```
-- consumer key and consumer secret should be obtained from your Nebri instance using https://github.com/briem-bixly/nebrios-authentication
+- consumer key and consumer secret should be obtained from your Nebri instance using https://github.com/nebrie/nebrios-authentication
 - if you have already created an access token all arguments should be passed
 - if you have not created an access token, only consumer key and consumer secret are required. this app will make the appropriate call for an access token and will save the generated token to your NebriOAuthClient instance automatically.
 
